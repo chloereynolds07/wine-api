@@ -7,7 +7,7 @@ router.get('/', (req, res)=> {
 
     axios.get(url).then(resp => {
         res.render('pages/wines', {
-            title: 'dessert Wines',
+            title: 'Dessert Wines',
             name: 'dessert wines',
             data: resp.data,
             path: 'dessert-wines'
