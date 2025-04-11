@@ -8,7 +8,7 @@ router.get('/', (req, res)=> {
     axios.get(url).then(resp => {
         res.render('pages/wines', {
             title: 'Sparkling Wines',
-            name: 'sparkling wines',
+            name: 'velvet oak cellars',
             data: resp.data,
             path: 'sparkling-wines'
         })
@@ -26,7 +26,7 @@ router.get('/:id', (req, res)=> {
 
         res.render('pages/wineSingle', {
             title: 'sparkling-wine',
-            name: 'sparkling wine',
+            name: 'velvet oak cellars',
             wine: data,
             path: 'sparkling-wines'
         })
