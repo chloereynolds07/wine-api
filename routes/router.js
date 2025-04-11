@@ -12,7 +12,22 @@ router.get('/', (req, res)=> {
     })
 })
 
-const redWineRoutes = require('./api/redwineRoutes')
-router.use('/red-wines', redWineRoutes)
+const redwineRoutes = require('./api/redwineRoutes')
+router.use('/red-wines', redwineRoutes)
+
+const whitewineRoutes = require('./api/whitewineRoutes')
+router.use('/white-wines', whitewineRoutes)
+
+const sparklingwineRoutes = require('./api/sparklingwineRoutes')
+router.use('/sparkling-wines', sparklingwineRoutes)
+
+const rosewineRoutes = require('./api/rosewineRoutes')
+router.use('/rose-wines', rosewineRoutes)
+
+const dessertwineRoutes = require('./api/dessertwineRoutes')
+router.use('/dessert-wines', dessertwineRoutes)
+
+const portRoutes = require('./api/portRoutes')
+router.use('/port-wines', portRoutes)
 
 module.exports = router

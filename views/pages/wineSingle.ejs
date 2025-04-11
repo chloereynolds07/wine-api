@@ -4,12 +4,22 @@
     <div class="container">
         <div class="container">
             <div class="row">
-                <% if (wine.id > 1) { %>
-                    <li class="page-item">
-                        <a href="/<%= path %>/<%= wine.id - 1 %>" class="page-link wine-link">prev</a>
-                    </li>
-                <%   } %>
-                        <li class="page-item"></li>
+                <nav class="winePage">
+                    <ul class="pagination">
+                        <% if (wine.id > 1) { %>
+                            <li class="page-item">
+                                <a href="/<%= path %>/<%=wine.id - 1 %>" class="page-link wine-link-prev">prev</a>
+                            </li>
+                        <% } %>
+                        <li class="page-item">
+                            <% if (wine.id > 1) { %>
+                                <li class="page-item">
+                                    <a href="/<%= path %>/<%=wine.id + 1 %>" class="page-link wine-link-next">next</a>
+                                </li>
+                            <% } %>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="col-4">
                     <img src="<%= wine.image %>" alt="<%= wine.wine %>" class="img-fluid py-4 single-wine-img">
                 </div>

@@ -52,3 +52,15 @@ main {
 .list-group-item-bg {
     background-color: #000;
 }
+
+.wine-link-prev, .wine-link-next {
+    background-color: #000;
+    font-family: Eagle Lake;
+    color:rgb(255, 30, 30);
+}
+
+.wine-link-prev:hover, .wine-link-next:hover {
+    background-color: rgb(255, 30, 30);
+    font-family: Eagle Lake;
+    color: #000;
+}

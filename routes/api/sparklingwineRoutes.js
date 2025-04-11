@@ -3,14 +3,14 @@ const router = express.Router()
 const axios = require('axios')
 
 router.get('/', (req, res)=> {
-    const url = 'https://api.sampleapis.com/wines/reds'
+    const url = 'https://api.sampleapis.com/wines/sparkling'
 
     axios.get(url).then(resp => {
         res.render('pages/wines', {
-            title: 'Red Wines',
-            name: 'red wines',
+            title: 'Sparkling Wines',
+            name: 'sparkling wines',
             data: resp.data,
-            path: 'red-wines'
+            path: 'sparkling-wines'
         })
     })
 })
@@ -18,17 +18,17 @@ router.get('/', (req, res)=> {
 router.get('/:id', (req, res)=> {
     const id = req.params.id
 
-    const url = `https://api.sampleapis.com/wines/reds/${id}`
+    const url = `https://api.sampleapis.com/wines/sparkling/${id}`
 
     axios.get(url).then(resp => {
 
         const data = resp.data 
 
         res.render('pages/wineSingle', {
-            title: 'red-wine',
-            name: 'red wine',
+            title: 'sparkling-wine',
+            name: 'sparkling wine',
             wine: data,
-            path: 'red-wines'
+            path: 'sparkling-wines'
         })
     })
 })
