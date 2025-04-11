@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="main">
+    <div class="container">
+        <div class="row">
+            <% data.forEach(wine => { %>
+                <div class="col-md-4 g-3">
+                    <div class="card card-background" style="width: 16rem;">
+                        <img src="<%= wine.image %>" alt="<%=wine.wine%>" class="card-img-bottom w-50">
+                        <div class="card-header text-uppercase card-text-color fs-3">Winery: <%= wine.winery %></div>
+                        <div class="card-body">
+                            <div class="card-title card-text-color">Wine: <%=wine.wine %></div>
+                            <div class="card-subtitle text-light fst-italic">Location: <%=wine.location %></div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/<%= path %>/<%=wine.id %>" class="wine-link">Click to see Ratings</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+
+<%- include('../partials/footer') %>

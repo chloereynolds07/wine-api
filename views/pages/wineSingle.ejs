@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="wineSinglePage">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <% if (wine.id > 1) { %>
+                    <li class="page-item">
+                        <a href="/<%= path %>/<%= wine.id - 1 %>" class="page-link wine-link">prev</a>
+                    </li>
+                <%   } %>
+                        <li class="page-item"></li>
+                <div class="col-4">
+                    <img src="<%= wine.image %>" alt="<%= wine.wine %>" class="img-fluid py-4 single-wine-img">
+                </div>
+                    <div class="col-5 mt-2">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-group-item-bg list-text fst-italic">
+                                Wine: <%= wine.wine %>
+                            </li>
+                            <li class="list-group-item list-group-item-bg list-text fst-italic">Average: <%= wine.rating.average %></li>
+                            <li class="list-group-item list-group-item-bg list-text fst-italic">Reviews: <%=wine.rating.reviews %> | <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </li>
+                            <li class="list-group-item list-group-item-bg list-text fst-italic">Location: <%= wine.location %></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>
